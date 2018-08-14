@@ -3,9 +3,11 @@
 
 - name: restart consul
   include: restart_consul.yml
+  tags: begin_running
 
 - name: start consul
   include: start_consul.yml
+  tags: begin_running
 
 - name: restart dnsmasq
   service:

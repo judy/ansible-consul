@@ -27,7 +27,7 @@
   when: not consul_checksum.stat.exists | bool
 
 - name: Read Consul package checksum
-  win_shell: "findstr {{ consul_pkg }} /tmp/consul/consul_{{ consul_version }}_SHA256SUMS"
+  win_shell: "findstr {{ consul_pkg }} c:\\tmp\\consul\\consul_{{ consul_version }}_SHA256SUMS"
   register: consul_pkg_checksum
   tags: installation
 
